@@ -7,10 +7,10 @@ let yspeed
 let r, g, b
 
 function setup() {
-  createCanvas(windowWidth, windowHeight)
+  createCanvas(windowWidth, windowHeight-1)
   x= random(width - 80)
   y= random(height - 60)
-  xspeed= 3
+  xspeed= 4
   yspeed= 3
   pickColour()
 }
@@ -22,12 +22,16 @@ function pickColour() {
 }
 
 function draw() {
+
+  //smooth lines
+  // noStroke()
   rect(x, y, windowWidth/20, windowWidth/35, 15)
   let c = color(r, g, b)
   fill(c)
   x = x + xspeed
   y = y + yspeed
-
+  //rainbow colors
+  // pickColour()
   if (x + windowWidth/20 >= width) {
     xspeed = -xspeed
     pickColour()
