@@ -46,9 +46,3 @@ function draw() {
     pickColour()
   }
 }
-
-module.exports = {
-  draw,
-  setup,
-
-}
