@@ -1,12 +1,13 @@
 # trail-dvd-visualiser
-Toy Project for creating a basic visualiser in p5.js
+Toy Project for creating a basic visualiser in p5.js and React.js
 
 --------
 
 run the following command:
 
-```npm install -g http-server```
+```npm install ```
 
-then navigate into the public directory and run:
+then:
 
-```http-server ./```
+```npm run dev```
+
