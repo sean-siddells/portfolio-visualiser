@@ -1,0 +1,48 @@
+{
+  "name": "trail-dvd-visualiser",
+  "version": "1.0.0",
+  "description": "Toy project for basic visualiser using p5.js",
+  "main": "sketch.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "client": "webpack serve --hot --config ./client/webpack.config.js",
+    "dev": "run-p dev:client dev:server",
+    "dev:client": "webpack --config ./client/webpack.config.js --watch",
+    "dev:server": "nodemon server",
+    "webpack": "webpack --config ./client/webpack.config.js",
+    "start": "node server",
+    "build": "npm run webpack",
+    "server": "node server",
+    "lint": "eslint --ext .js,.jsx ."
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/sean-siddells/trail-dvd-visualiser.git"
+  },
+  "author": "sean-siddells",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/sean-siddells/trail-dvd-visualiser/issues"
+  },
+  "homepage": "https://github.com/sean-siddells/trail-dvd-visualiser#readme",
+  "dependencies": {
+    "@babel/runtime": "^7.16.7",
+    "express": "^4.17.3",
+    "p5": "^1.4.1",
+    "react-router-dom": "^6.2.2"
+  },
+  "devDependencies": {
+    "@babel/core": "^7.17.5",
+    "@babel/preset-env": "^7.16.11",
+    "@babel/preset-react": "^7.12.10",
+    "babel-loader": "^8.2.3",
+    "eslint": "^8.10.0",
+    "eslint-config-eda": "^1.0.0",
+    "nodemon": "^2.0.15",
+    "npm-run-all": "^4.1.5",
+    "react": "^17.0.2",
+    "react-dom": "^17.0.2",
+    "webpack": "^5.69.1",
+    "webpack-cli": "^4.9.2"
+  }
+}
