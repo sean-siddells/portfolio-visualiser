@@ -6,6 +6,7 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "dev": "run-p dev:server",
+    "dev:client": "webpack --config ./client/webpack.config.js --watch",
     "dev:server": "nodemon server",
     "start": "node server",
     "build": "npm run webpack",
