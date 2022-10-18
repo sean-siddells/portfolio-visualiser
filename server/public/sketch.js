@@ -16,14 +16,15 @@ function setup() {
 }
 
 function pickColour() {
-  r = random(100, 256)
-  g = random(100, 256)
+  r = random(100, 100)
+  g = random(100, 200)
   b = random(100, 256)
 }
 
 function draw() {
-
-  //smooth lines
+  // * no trail
+  // background('white')
+  // * no box outline
   // noStroke()
   rect(x, y, windowWidth/20, windowWidth/35, 15)
   let c = color(r, g, b)
