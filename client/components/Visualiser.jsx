@@ -1,5 +1,6 @@
 import React from 'react'
 import Sketch from 'react-p5'
+import styled from 'styled-components';
 
 const Visualiser = () => {
   const randomInt = (min, max) => Math.floor(Math.random() * (max - min + 1)) + min;
@@ -31,8 +32,10 @@ const Visualiser = () => {
   const draw = (p5) => {
     // * no trail
     // p5.background('white')
+
     // * no box outline
     // noStroke()
+
     p5.rect(x, y, windowWidth/20, windowWidth/35, 15)
     let c = p5.color(r, g, b)
     p5.fill(c)
@@ -59,7 +62,11 @@ const Visualiser = () => {
     }
   }
 
-  return <Sketch setup={setup} draw={draw} />
+  return <StyledSketch setup={setup} draw={draw} />
 }
+
+const StyledSketch = styled(Sketch)`
+  position: absolute;
+`
 
 export default Visualiser
