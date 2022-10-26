@@ -1,20 +1,13 @@
 import React from 'react'
-import {Route, Switch} from 'react-router-dom'
-import Visualiser from './Visualiser'
-import Welcome from './Welcome'
+import { Outlet } from 'react-router-dom'
 import styled from 'styled-components'
 
-const App = () => {
+function App () {
   return (
-    <Container>
-      <Visualiser />
-      <Welcome />
-    </Container>
+    <div className="app">
+      <Outlet />
+    </div>
   )
 }
-
-const Container = styled.div`
-  position: relative;
-`
 
 export default App

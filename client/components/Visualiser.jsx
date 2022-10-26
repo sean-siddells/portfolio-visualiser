@@ -4,9 +4,9 @@ import styled from 'styled-components';
 
 const Visualiser = () => {
   const randomInt = (min, max) => Math.floor(Math.random() * (max - min + 1)) + min;
-  let r
-  let g
-  let b
+  let r = 100
+  let g = randomInt(100, 200)
+  let b = randomInt(100, 256)
 
   const windowWidth = window.innerWidth
   const windowHeight = window.innerHeight
@@ -21,14 +21,16 @@ const Visualiser = () => {
   let y = randomInt(0, (windowHeight - 60))
   // let x = 0
   // let y= 0
-  let xSpeed = 4
-  let ySpeed = 3
+  let xSpeed = 3
+  let ySpeed = 4
 
   const setup = (p5, canvasParentRef) => {
-    // pickColour()
+    pickColour()
     p5.createCanvas(windowWidth, windowHeight - 1).parent(canvasParentRef)
+    console.log('setup')
   }
 
+  console.log('hello')
   const draw = (p5) => {
     // * no trail
     // p5.background('white')
