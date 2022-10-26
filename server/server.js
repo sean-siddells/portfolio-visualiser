@@ -12,7 +12,6 @@ server.use((req, res, next) => {
   next()
 })
 
-
 // For the client side BrowserRouter - because there is no '#' to distinguish
 // between client and server side routes, this sends back the index.html
 // (which contains the bundle.js) if none there is no server side route match.

@@ -1,0 +1,3 @@
+- Fix absolute position for the welcome button
+- Get the visualiser to work!!!
+- Get routes and sorted make home page and links/blog

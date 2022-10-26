@@ -1,13 +1,14 @@
-html, body {
-  margin: 0;
-  padding: 0;
-}
-canvas {
-  display: block;
-  background-color: rgb(173, 199, 248);
-}
+import React from 'react'
+import styled from 'styled-components'
 
-/* .title-container{
+const Welcome = () => (
+  <WelcomeWrapper>
+    <h1 className="welcome">WELCOME</h1>
+  </WelcomeWrapper>
+)
+
+
+const WelcomeWrapper = styled.div`
   z-index: 1;
   margin: 25% 25%;
   padding-left: 5%;
@@ -20,9 +21,5 @@ canvas {
   border-radius: 20px;
   box-shadow: 5px 5px #00000085 ;
   font-family: 'Press Start 2P', cursive;
-} */
-
-.title-container:hover {
-  background-color: powderblue;
-  cursor: pointer;
-}
+`
+export default Welcome
