@@ -20,10 +20,12 @@ const router = createBrowserRouter(
   )
 );
 
-const root = ReactDOM.createRoot(document.getElementById("app"));
-root.render(
-  <RouterProvider router={router} />
-);
+const rootNode = document.getElementById('app');
+
+if(rootNode){
+  ReactDOM.createRoot(rootNode)
+    .render(<RouterProvider router={router} />);
+}
 
 // const firebaseAppConfig = getFirebaseConfig()
 // initializeApp(firebaseAppConfig)

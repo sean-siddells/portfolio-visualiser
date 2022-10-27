@@ -1,8 +1,7 @@
 import React from 'react'
 import { Outlet } from 'react-router-dom'
-import styled from 'styled-components'
 
-function App () {
+const App: React.FC= () => {
   return (
     <div className="app">
       <Outlet />
