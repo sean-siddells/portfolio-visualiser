@@ -3,8 +3,7 @@ import Visualiser from './Visualiser'
 import Welcome from './Welcome'
 import styled from 'styled-components'
 
-const LandingPage = () => {
-  console.log('landing page')
+const LandingPage: React.FC = () => {
   return (
     <Container>
       <Visualiser/>

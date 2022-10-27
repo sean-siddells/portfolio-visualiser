@@ -1,9 +1,12 @@
 import React from 'react'
 import Sketch from 'react-p5'
 import styled from 'styled-components';
+import p5Types from 'p5'
 
-const Visualiser = () => {
-  const randomInt = (min, max) => Math.floor(Math.random() * (max - min + 1)) + min;
+const Visualiser: React.FC = () => {
+
+  const randomInt = (min: number, max:number) => Math.floor(Math.random() * (max - min + 1)) + min;
+
   let r = 100
   let g = randomInt(100, 200)
   let b = randomInt(100, 256)
@@ -19,28 +22,24 @@ const Visualiser = () => {
 
   let x = randomInt(0, (windowWidth - 80))
   let y = randomInt(0, (windowHeight - 60))
-  // let x = 0
-  // let y= 0
   let xSpeed = 3
   let ySpeed = 4
 
-  const setup = (p5, canvasParentRef) => {
+  const setup = (p5: p5Types, canvasParentRef: Element) => {
     pickColour()
     p5.createCanvas(windowWidth, windowHeight - 1).parent(canvasParentRef)
-    console.log('setup')
   }
 
-  console.log('hello')
-  const draw = (p5) => {
+  const draw = (p5: p5Types) => {
     // * no trail
     // p5.background('white')
 
     // * no box outline
     // noStroke()
 
-    p5.rect(x, y, windowWidth/20, windowWidth/35, 15)
     let c = p5.color(r, g, b)
     p5.fill(c)
+    p5.rect(x, y, windowWidth/20, windowWidth/35, 15)
     x = x + xSpeed
     y = y + ySpeed
     // rainbow colors

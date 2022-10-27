@@ -1,12 +1,11 @@
 import React from 'react'
 import styled from 'styled-components'
 
-const Welcome = () => (
+const Welcome: React.FC = () => (
   <WelcomeWrapper>
     <h1 className="welcome">WELCOME</h1>
   </WelcomeWrapper>
 )
-
 
 const WelcomeWrapper = styled.div`
   z-index: 1;
