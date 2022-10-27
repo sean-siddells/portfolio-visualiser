@@ -31,7 +31,13 @@
         }
       ],
       "no-shadow": "off",
-      "@typescript-eslint/no-shadow": ["error"]
+      "@typescript-eslint/no-shadow": ["error"],
+      "react/jsx-filename-extension": [
+        2, {
+          "extensions":
+          [".js", ".jsx", ".ts", ".tsx"]
+        }
+      ]
     },
     "settings": {
       "import/resolver": {
