@@ -23,12 +23,12 @@ const Visualiser: React.FC = () => {
   let xSpeed = 3;
   let ySpeed = 4;
 
-  const setup: SketchProps['setup'] = (p5, canvasParentRef): void => {
+  const setup: SketchProps['setup'] = (p5, canvasParentRef) => {
     pickColour();
     p5.createCanvas(windowWidth, windowHeight - 1).parent(canvasParentRef);
   };
 
-  const draw: SketchProps['draw'] = (p5) : void => {
+  const draw: SketchProps['draw'] = (p5) => {
     // * no trail
     // p5.background('white')
 

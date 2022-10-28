@@ -1,11 +1,19 @@
 import React from 'react';
+import { useNavigate } from 'react-router-dom';
 import styled from 'styled-components';
 
-const Welcome: React.FC = () => (
-  <WelcomeWrapper>
-    <h1 className="welcome">WELCOME</h1>
-  </WelcomeWrapper>
-);
+const Welcome: React.FC = () => {
+  const navigate = useNavigate();
+  const handleClick = () => {
+    navigate('/home');
+  };
+
+  return (
+    <WelcomeWrapper onClick={handleClick}>
+      <h1 className="welcome">WELCOME</h1>
+    </WelcomeWrapper>
+  );
+};
 
 const WelcomeWrapper = styled.div`
   z-index: 1;
@@ -20,5 +28,8 @@ const WelcomeWrapper = styled.div`
   border-radius: 20px;
   box-shadow: 5px 5px #00000085 ;
   font-family: 'Press Start 2P', cursive;
+  &:hover {
+    background-color: lightblue;
+  };
 `;
 export default Welcome;
