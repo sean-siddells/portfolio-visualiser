@@ -30,6 +30,7 @@ const WelcomeWrapper = styled.div`
   font-family: 'Press Start 2P', cursive;
   &:hover {
     background-color: lightblue;
+    cursor: pointer;
   };
 `;
 export default Welcome;
