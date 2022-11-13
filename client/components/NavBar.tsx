@@ -2,10 +2,10 @@ import React from 'react';
 import styled from 'styled-components';
 
 const NavBar: React.FC = () => {
-  const List = ['hello', 'hello', 'hello', 'hello', 'hello'];
+  const Links = ['Home', 'Projects', 'hello', 'hello', 'hello'];
   return (
     <NavBarWrapper>
-      {List.map((item) => <div>{item}</div>) }
+      {Links.map((item) => <div>{item}</div>) }
     </NavBarWrapper>
   );
 };

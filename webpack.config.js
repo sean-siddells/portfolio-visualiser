@@ -7,8 +7,10 @@ module.exports = {
   output: {
     path: path.join(__dirname, './src/public'),
     filename: 'bundle.js',
+    publicPath: '/src/public/',
   },
   devServer: {
+    historyApiFallback: true,
     static: {
       directory: path.resolve(__dirname, './src/public'),
     },

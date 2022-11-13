@@ -19,7 +19,6 @@ server.get('*', (req, res) => {
   try {
     res.sendFile(path.join(__dirname, './public/index.html'));
   } catch (err) {
-    console.error(err);
     if (err) res.status(500).send(err);
   }
 });
