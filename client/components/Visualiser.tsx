@@ -40,8 +40,10 @@ const Visualiser: React.FC = () => {
     p5.rect(x, y, windowWidth / 20, windowWidth / 35, 15);
     x += xSpeed;
     y += ySpeed;
+
     // rainbow colors
     pickColour();
+
     if (x + windowWidth / 20 >= windowWidth) {
       xSpeed = -xSpeed;
       pickColour();
