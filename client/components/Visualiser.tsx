@@ -41,7 +41,7 @@ const Visualiser: React.FC = () => {
     x += xSpeed;
     y += ySpeed;
 
-    // rainbow colors
+    // * rainbow colors
     pickColour();
 
     if (x + windowWidth / 20 >= windowWidth) {

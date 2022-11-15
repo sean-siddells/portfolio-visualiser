@@ -27,7 +27,7 @@ const WelcomeWrapper = styled.div`
   background: white;
   border-radius: 20px;
   box-shadow: 5px 5px #00000085 ;
-  font-family: 'Press Start 2P', cursive;
+  font-family: 'Elanor';
   &:hover {
     background-color: lightblue;
     cursor: pointer;

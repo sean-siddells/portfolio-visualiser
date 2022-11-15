@@ -1,8 +1,41 @@
 html, body {
   margin: 0;
   padding: 0;
+  background-color: #E7DFD5;
 }
 canvas {
   display: block;
-  background-color: rgb(173, 199, 248);
+  background-color: rgb(226, 235, 255);
+}
+@font-face {
+  font-family: 'Maghfirea';
+  src: url('./fonts/Maghfirea.ttf') format('truetype')
+}
+@font-face {
+  font-family: 'Elanor';
+  src: url('./fonts/ElanorFreePersonalUse-ExBdIt.otf') format('opentype')
+}
+
+@font-face {
+  font-family: 'DisketMono';
+  src: url('./fonts/Disket-Mono-Bold.ttf') format('truetype');
+  font-weight: bold;
+  font-style: normal
+}
+
+@font-face {
+  font-family: 'DisketMono';
+  src: url('./fonts/Disket-Mono-Regular.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Sonder';
+  src: url('./fonts/SonderRegular.otf') format('opentype');
+}
+
+@font-face {
+  font-family: 'ProjectBlackbird';
+  src: url('./fonts/Projekt\ Blackbird\ v2.otf') format('opentype');
 }
