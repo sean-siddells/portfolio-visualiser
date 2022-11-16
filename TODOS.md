@@ -1,0 +1,1 @@
+- REENABLE STRICT MODE before deploying prod build
