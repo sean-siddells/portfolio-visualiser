@@ -11,3 +11,4 @@ then:
 
 ```npm run dev```
 
+go to ```localhost:8080``` in your browser to view the site. 
