@@ -13,7 +13,8 @@
     "build": "webpack --mode production --progress --hide-modules",
     "server": "node server",
     "test": "jest --watchAll",
-    "lint": "eslint --ext .js,.jsx ."
+    "lint": "eslint --ext .js,.jsx .",
+    "refresh": "rm -rf node_modules && npm install"
   },
   "repository": {
     "type": "git",

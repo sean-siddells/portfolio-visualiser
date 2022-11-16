@@ -1,12 +1,14 @@
 html, body {
   margin: 0;
   padding: 0;
-  background-color: #E7DFD5;
+  background-color: #eae7e3;
 }
+
 canvas {
   display: block;
   background-color: rgb(226, 235, 255);
 }
+
 @font-face {
   font-family: 'Maghfirea';
   src: url('./fonts/Maghfirea.ttf') format('truetype')

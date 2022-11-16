@@ -16,7 +16,6 @@
         "sourceType": "module"
     },
     "plugins": [
-      "react",
       "react-hooks"
     ],
     "rules": {
@@ -32,6 +31,11 @@
       "no-shadow": "off",
       "@typescript-eslint/no-shadow": ["error"],
       "@typescript-eslint/no-var-requires": ["warn"],
+      "indent": "off",
+      "@typescript-eslint/indent": [
+        "error",
+        2
+      ],
       "react/jsx-filename-extension": [
         2, {
           "extensions":

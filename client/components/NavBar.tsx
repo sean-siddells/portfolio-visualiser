@@ -5,12 +5,13 @@ const NavBar: React.FC = () => {
   const Links = ['Home', 'Projects', 'Contact'];
   return (
     <NavBarWrapper>
-      {Links.map((item) => <div>{item}</div>) }
+      {Links.map((item) => <div>{item}</div>)}
     </NavBarWrapper>
   );
 };
 
 const NavBarWrapper = styled.div`
+  z-index: 1;
   padding: 8vh 5vw;
   top: 0;
   left: 0;

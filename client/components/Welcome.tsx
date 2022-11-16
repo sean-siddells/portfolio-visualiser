@@ -33,4 +33,5 @@ const WelcomeWrapper = styled.div`
     cursor: pointer;
   };
 `;
+
 export default Welcome;
