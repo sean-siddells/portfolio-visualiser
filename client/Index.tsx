@@ -12,12 +12,16 @@ import {
 import App from './components/App';
 import Home from './components/Home';
 import LandingPage from './components/LandingPage';
+import Contact from './components/Contact';
+import Projects from './components/Projects';
 
 const router = createBrowserRouter(
   createRoutesFromElements(
     <Route path="/" element={<App />}>
       <Route index element={<LandingPage />} />
       <Route path="/home" element={<Home />} />
+      <Route path="/contact" element={<Contact />} />
+      <Route path="/projects" element={<Projects />} />
     </Route>,
   ),
 );

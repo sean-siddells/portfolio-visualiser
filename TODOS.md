@@ -1,1 +1,3 @@
+- Add email form in contact component
+- Add Projects and write ups
 - REENABLE STRICT MODE before deploying prod build
