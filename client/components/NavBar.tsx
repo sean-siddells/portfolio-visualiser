@@ -1,14 +1,34 @@
 import React from 'react';
 import styled from 'styled-components';
+import { useNavigate } from 'react-router-dom';
 
 const NavBar: React.FC = () => {
-  const Links = ['Home', 'Projects', 'Contact'];
+  const Links: string[] = ['Home', 'Projects', 'Contact'];
+  const navigate = useNavigate();
+
+  const handleClick = (path: string) => {
+    navigate(`../${path}`, { replace: true });
+  };
+
   return (
     <NavBarWrapper>
-      {Links.map((item) => <div>{item}</div>)}
+      {Links.map((item) => {
+        const path = item.toLowerCase();
+        return (
+          <NavBarLink onClick={() => handleClick(path)}>{item}</NavBarLink>
+        );
+      })}
     </NavBarWrapper>
   );
 };
+
+const NavBarLink = styled.div`
+  text-decoration: none;
+  color: black;
+  &:hover {
+    cursor: pointer;
+  };
+`;
 
 const NavBarWrapper = styled.div`
   z-index: 1;
