@@ -1,6 +1,7 @@
 import React from 'react';
 import styled from 'styled-components';
 import { useNavigate } from 'react-router-dom';
+import WaterVideo from './WaterVideo';
 
 const NavBar: React.FC = () => {
   const Links: string[] = ['Home', 'Projects', 'Contact'];
@@ -18,29 +19,30 @@ const NavBar: React.FC = () => {
           <NavBarLink onClick={() => handleClick(path)}>{item}</NavBarLink>
         );
       })}
+      <WaterVideo />
     </NavBarWrapper>
   );
 };
 
+const padding = window.innerWidth / 40;
+
 const NavBarLink = styled.div`
-  text-decoration: none;
-  color: black;
+  position: relative;
+  z-index: 1;
   &:hover {
     cursor: pointer;
   };
+  width: ${(window.innerWidth * 0.2) - (padding * 2)}px;
+  padding: ${padding}px;
 `;
 
 const NavBarWrapper = styled.div`
-  z-index: 1;
-  padding: 8vh 5vw;
+  position: aboslute;
   top: 0;
   left: 0;
-  width: ${window.innerWidth};
-  display: flex;
-  flex-direction: row;
-  justify-content: space-between;
-  font-family: 'Elanor';
-  font-size: 2em;
+  font-family: 'DisketMono';
+  font-size: 2vw;
+  font-weight: bold;
 `;
 
 export default NavBar;
