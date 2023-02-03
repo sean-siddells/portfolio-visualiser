@@ -1,3 +1,5 @@
 - Add email form in contact component
 - Add Projects and write ups
+- Add media queries and toast navbar
+- Fix routing/ video re-render - could add an isLoaded property to state
 - REENABLE STRICT MODE before deploying prod build

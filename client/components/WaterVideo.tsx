@@ -1,12 +1,14 @@
 import React from 'react';
 import styled from 'styled-components';
 import waterVideo from '../../src/public/assets/water.mp4';
+import waterPic from '../../src/public/assets/rocky_water.JPG';
 
 const WaterVideo: React.FC = () => (
   <VideoContainer>
-    <video autoPlay muted loop>
+    {/* <video autoPlay muted loop>
       <source src={waterVideo} type="video/mp4" />
-    </video>
+    </video> */}
+    <img src={waterPic} alt="water" />
   </VideoContainer>
 );
 

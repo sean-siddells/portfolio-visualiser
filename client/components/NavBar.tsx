@@ -8,7 +8,7 @@ const NavBar: React.FC = () => {
   const navigate = useNavigate();
 
   const handleClick = (path: string) => {
-    navigate(`../${path}`, { replace: true });
+    navigate(`../${path}`);
   };
 
   return (
@@ -31,6 +31,7 @@ const NavBarLink = styled.div`
   z-index: 1;
   &:hover {
     cursor: pointer;
+    background-color: cornflowerblue;
   };
   width: ${(window.innerWidth * 0.2) - (padding * 2)}px;
   padding: ${padding}px;

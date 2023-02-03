@@ -13,7 +13,7 @@ const Visualiser: React.FC = () => {
   const windowHeight = window.innerHeight;
 
   function pickColour() {
-    r = 100;
+    r = 150;
     g = randomInt(100, 200);
     b = randomInt(100, 256);
   }
@@ -42,7 +42,7 @@ const Visualiser: React.FC = () => {
     y += ySpeed;
 
     // * rainbow colors
-    pickColour();
+    // pickColour();
 
     if (x + windowWidth / 20 >= windowWidth) {
       xSpeed = -xSpeed;

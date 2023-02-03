@@ -1,17 +1,13 @@
 import React from 'react';
-import styled from 'styled-components';
 import NavBar from './NavBar';
-import Container from '../constants';
+import { Container, ContentWrapper } from '../constants';
 
 const Contact: React.FC = () => (
   <Container>
     <NavBar />
-    <ContactWrapper>This is Contact</ContactWrapper>
+    <ContentWrapper>This is Contact</ContentWrapper>
   </Container>
 
 );
-
-const ContactWrapper = styled.div`
-`;
 
 export default Contact;

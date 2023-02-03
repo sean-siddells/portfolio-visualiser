@@ -18,8 +18,8 @@ const Welcome: React.FC = () => {
 const WelcomeWrapper = styled.div`
   z-index: 1;
   margin: 25% 25%;
-  padding-left: 5%;
-  padding-right: 5%;
+  padding-left: 2.5%;
+  padding-right: 2.5%;
   display: block;
   text-align: center;
   position: absolute;
@@ -27,7 +27,7 @@ const WelcomeWrapper = styled.div`
   background: white;
   border-radius: 20px;
   box-shadow: 5px 5px #00000085 ;
-  font-family: 'Elanor';
+  font-family: 'DisketMono';
   &:hover {
     background-color: lightblue;
     cursor: pointer;
