@@ -9,3 +9,8 @@ export const ContentWrapper = styled.div`
   font-family: 'Montserrat';
   padding: 8vh 8vw;
 `;
+
+export const Spacer = styled.div`
+  display: flex;
+  height: 32px;
+`;

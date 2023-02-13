@@ -42,7 +42,7 @@ const NavBarWrapper = styled.div`
   top: 0;
   left: 0;
   font-family: 'DisketMono';
-  font-size: 2vw;
+  font-size: 1.5em;
   font-weight: bold;
 `;
 

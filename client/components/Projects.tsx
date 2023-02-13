@@ -1,6 +1,7 @@
 import React from 'react';
-import { Container, ContentWrapper } from '../constants';
+import { Container, ContentWrapper, Spacer } from '../constants';
 import NavBar from './NavBar';
+import Snake from './Snake';
 
 const Projects: React.FC = () => (
   <Container>
@@ -14,6 +15,15 @@ const Projects: React.FC = () => (
       We were very proud of what we achieved in such a small
       amount of time - learning the basics of Phaser3.js and the workflow of game development was
       a rewarding challenge.
+
+      <h2>Trail dvd visualiser</h2>
+
+      The landing page for this site was a toy project inspired by the classic
+      dvd visualiser and was made using p5.js.
+      <Spacer />
+      <Container>
+        <Snake />
+      </Container>
     </ContentWrapper>
   </Container>
 );
