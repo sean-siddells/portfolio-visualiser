@@ -1,7 +1,7 @@
 import React from 'react';
 import styled from 'styled-components';
 import { useNavigate } from 'react-router-dom';
-import WaterVideo from './WaterVideo';
+import WaterPic from './WaterPic';
 
 const NavBar: React.FC = () => {
   const Links: string[] = ['Home', 'Projects', 'Contact'];
@@ -19,7 +19,7 @@ const NavBar: React.FC = () => {
           <NavBarLink onClick={() => handleClick(path)}>{item}</NavBarLink>
         );
       })}
-      <WaterVideo />
+      <WaterPic />
     </NavBarWrapper>
   );
 };
