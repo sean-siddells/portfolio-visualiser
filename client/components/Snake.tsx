@@ -5,7 +5,7 @@ import Sketch, { SketchProps } from 'react-p5';
 import styled from 'styled-components';
 import { Container } from '../constants';
 
-const canvasWidth = 240;
+const canvasWidth = 480;
 const canvasHeight = 240;
 
 const Snake: React.FC = () => {
@@ -32,12 +32,12 @@ const Snake: React.FC = () => {
 
   const setup: SketchProps['setup'] = (p5, canvasParentRef) => {
     pickColour();
-    p5.createCanvas(240, 240).parent(canvasParentRef);
+    p5.createCanvas(canvasWidth, canvasHeight).parent(canvasParentRef);
   };
 
   const draw: SketchProps['draw'] = (p5) => {
-    if (!trail) p5.background('#eae7e3');
     if (smooth) p5.noStroke();
+    if (!trail) p5.background('#eae7e3');
     if (rainbow) pickColour();
 
     const c = p5.color(r, g, b);
@@ -66,14 +66,16 @@ const Snake: React.FC = () => {
   };
 
   return (
-    <Container>
-      <Button type="button" onClick={() => setTrail(!trail)}>trail</Button>
-      <Button type="button" onClick={() => setRainbow(!rainbow)}>rainbow</Button>
-      <Button type="button" onClick={() => setSmooth(!smooth)}>smooth</Button>
+    <>
+      <ButtonContainer>
+        <Button type="button" onClick={() => setTrail(!trail)} style={{ backgroundColor: trail ? 'lightblue' : 'white' }}>trail</Button>
+        <Button type="button" onClick={() => setRainbow(!rainbow)} style={{ backgroundColor: rainbow ? 'lightblue' : 'white' }}>rainbow</Button>
+        <Button type="button" onClick={() => setSmooth(!smooth)} style={{ backgroundColor: smooth ? 'lightblue' : 'white' }}>smooth</Button>
+      </ButtonContainer>
       <Container>
         <StyledSketch setup={setup} draw={draw} />
       </Container>
-    </Container>
+    </>
   );
 };
 
@@ -86,6 +88,19 @@ const StyledSketch = styled(Sketch)`
 const Button = styled.button`
   position: relative;
   z-index: 1
+  flex-direction: column;
+  &:hover {
+    cursor: pointer;
+  }
+  margin-bottom: 8px;
+  border-radius: 4px;
+`;
+
+const ButtonContainer = styled.div`
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  padding-right: 8px;
 `;
 
 export default Snake;
