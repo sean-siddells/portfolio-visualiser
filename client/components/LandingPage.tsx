@@ -5,7 +5,7 @@ import Welcome from './Welcome';
 
 const LandingPage: React.FC = () => (
   <Container>
-    <Visualiser />
+    <Visualiser mini={false} />
     <Welcome />
   </Container>
 );

@@ -1,7 +1,7 @@
 import React from 'react';
 import { Container, ContentWrapper, Spacer } from '../constants';
 import NavBar from './NavBar';
-import Snake from './Snake';
+import Visualiser from './Visualiser';
 
 const Projects: React.FC = () => (
   <Container>
@@ -22,7 +22,7 @@ const Projects: React.FC = () => (
       dvd visualiser and was made using p5.js.
       <Spacer />
       <Container>
-        <Snake />
+        <Visualiser mini />
       </Container>
     </ContentWrapper>
   </Container>
