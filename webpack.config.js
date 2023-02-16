@@ -1,7 +1,10 @@
 const path = require('path');
 
-// const Dotenv = require('dotenv-webpack')
-// const { DefinePlugin } = require('webpack')
+const { DefinePlugin } = require('webpack');
+const dotenv = require('dotenv');
+
+dotenv.config();
+
 module.exports = {
   entry: path.join(__dirname, './client/Index'),
   output: {
@@ -35,5 +38,10 @@ module.exports = {
       url: require.resolve('url/'),
     },
   },
+  plugins: [
+    new DefinePlugin({
+      'process.env': JSON.stringify(process.env),
+    }),
+  ],
   devtool: 'source-map',
 };
