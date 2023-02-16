@@ -1,38 +1,44 @@
-import React, { useRef } from 'react';
+import React, { FormEventHandler, useRef } from 'react';
 import emailjs from '@emailjs/browser';
+import styled from 'styled-components';
 import NavBar from './NavBar';
 import { Container, ContentWrapper } from '../constants';
 
 const Contact: React.FC = () => {
-  const form = useRef();
-  console.log(process.env.EMAIL_SERVICE_ID);
+  const form = useRef<HTMLFormElement | null>(null);
 
-  const sendEmail = (e: React.ChangeEvent<HTMLInputElement>) => {
+  const handleSubmit: FormEventHandler = (e: React.ChangeEvent<HTMLInputElement>) => {
     e.preventDefault();
     emailjs.sendForm(
-      process.env.EMAIL_SERVICE_ID,
-      process.env.EMAIL_TEMPLATE_ID,
-      form.current,
+      process.env.EMAIL_SERVICE_ID ?? '',
+      process.env.EMAIL_TEMPLATE_ID ?? '',
+      form.current ?? '',
       process.env.EMAIL_PUBLIC_KEY,
-    );
+    ).then((result) => console.log(result.text))
+      .catch((error) => console.log(error.text));
   };
 
   return (
     <Container>
       <NavBar />
       <ContentWrapper>
-        <form ref={form} onSubmit={sendEmail}>
-          <label>Name</label>
-          <input type="text" name="user_name" />
-          <label>Email</label>
-          <input type="email" name="user_email" />
-          <label>Message</label>
-          <textarea name="message" />
-          <input type="submit" value="Send" />
+        <form ref={form} onSubmit={handleSubmit}>
+          <Input type="text" placeholder="Name" name="user_name" />
+          <Input type="email" name="user_email" placeholder="Email" />
+          <Message name="message" placeholder="Message" />
+          <Input type="submit" value="Send" />
         </form>
       </ContentWrapper>
     </Container>
   );
 };
+
+const Input = styled.input`
+  border-radius: 4px;
+`;
+
+const Message = styled.textarea`
+  border-radius: 4px;
+`;
 
 export default Contact;
