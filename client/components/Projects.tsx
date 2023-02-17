@@ -1,5 +1,7 @@
 import React from 'react';
-import { Container, ContentWrapper, Spacer } from '../constants';
+import {
+  Container, ContentWrapper, Spacer, SubHeading,
+} from '../constants';
 import NavBar from './NavBar';
 import Visualiser from './Visualiser';
 
@@ -7,7 +9,7 @@ const Projects: React.FC = () => (
   <Container>
     <NavBar />
     <ContentWrapper>
-      <h2>Git Gud</h2>
+      <SubHeading>Git Gud</SubHeading>
 
       This was my final project at Dev Academy - a 2D sidescrolling platformer game that myself
       and three friends made in a week!
@@ -16,7 +18,7 @@ const Projects: React.FC = () => (
       amount of time - learning the basics of Phaser3.js and the workflow of game development was
       a rewarding challenge.
 
-      <h2>Trail dvd visualiser</h2>
+      <SubHeading>Trail dvd visualiser</SubHeading>
 
       The landing page for this site was a toy project inspired by the classic
       dvd visualiser and was made using p5.js.

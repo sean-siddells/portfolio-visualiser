@@ -15,7 +15,7 @@ const Home: React.FC = () => (
 
 );
 
-const IntroWrapper = styled.div`
+export const IntroWrapper = styled.div`
   position: relative;
   font-family: 'DisketMono';
   font-size: 1.5vw;

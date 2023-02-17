@@ -7,10 +7,15 @@ export const Container = styled.div`
 
 export const ContentWrapper = styled.div`
   font-family: 'Montserrat';
-  padding: 8vh 8vw;
+  padding: 10vh 10vw;
 `;
 
 export const Spacer = styled.div`
   display: flex;
   height: 32px;
+`;
+
+export const SubHeading = styled.h3`
+  font-family: 'DisketMono';
+  font-size: 24px;
 `;
